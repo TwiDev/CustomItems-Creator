@@ -1,13 +1,12 @@
 package net.twidev.itemsCreator;
 
+import net.twidev.itemsCreator.command.ItemsCommand;
 import net.twidev.itemsCreator.items.ItemsManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Creator extends JavaPlugin {
 
     private static Creator instance;
-
-    private Config config;
 
     private ItemsManager itemsManager;
 
@@ -30,9 +29,10 @@ public class Creator extends JavaPlugin {
 
         saveDefaultConfig();
 
-        config = new Config(this.getConfig());
-
         itemsManager = new ItemsManager(this);
+        itemsManager.loadConfigItems();
+
+        getCommand("items").setExecutor(new ItemsCommand());
 
         super.onEnable();
     }
@@ -48,10 +48,6 @@ public class Creator extends JavaPlugin {
 
     public static Creator getInstance() {
         return instance;
-    }
-
-    public Config getItemsConfig() {
-        return config;
     }
 
     public ItemsManager getItemsManager() {
