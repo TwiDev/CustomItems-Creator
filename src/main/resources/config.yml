@@ -1,0 +1,21 @@
+items:
+  customStone:
+    displayName: "&cExemple Item"
+    material: "STONE"
+    id: 1
+    amount: 1
+    lore: "A exemple item"
+
+  exemple:
+    displayName: "&cExemple Item"
+    material: "DIRT"
+    id: 1
+    amount: 1
+    lore: "A exemple item"
+    actions:
+      - "/give %player% minecraft:dirt"
+    interactActions:
+      - "/tell %player% Hello"
+    customRecipe:
+      1: "customStone"
+      2: "STONE"
