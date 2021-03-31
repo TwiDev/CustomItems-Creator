@@ -1,0 +1,6 @@
+net/twidev/itemsCreator/items/ItemsManager.java
+ net.twidev.itemsCreator.items.ItemsManager
+net/twidev/itemsCreator/Creator.java
+ net.twidev.itemsCreator.Creator
+net/twidev/itemsCreator/command/ItemsCommand.java
+ net.twidev.itemsCreator.command.ItemsCommand
