@@ -21,6 +21,10 @@ public class ItemsCommand implements CommandExecutor {
 
                     sender.sendMessage(stringBuilder.toString());
                     break;
+                case "reload":
+                    Creator.getInstance().saveConfig();
+                    Creator.getInstance().reloadConfig();
+                    break;
             }
         }
 
