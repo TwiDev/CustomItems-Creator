@@ -1,0 +1,13 @@
+name: ItemsCreator
+version: 1.0.0
+author: TwiDev
+main: net.twidev.itemsCreator.Creator
+depend:
+  - CustomItems
+
+commands:
+  items:
+    description: All command of custom items creator
+    permission: command.custom.items
+    aliases:
+      - itemscreator
